@@ -4,6 +4,8 @@ import Icon from './icon.png';
 import Data from './data.xml';
 import jsonData from './data.json';
 import printMe from './print.js';
+import { cube } from './math.js';
+
 function component() {
   let element = document.createElement('div');
   var btn = document.createElement('button');
@@ -29,10 +31,21 @@ function component() {
   return element;
 }
 
+function component_tree_shaking(){
+	var element = document.createElement('pre');
+	element.innerHTML = [
+		'Hello webpack!',
+		'4 cubed is equal to ' + cube(4)
+	].join('.\n\n');
+	return element;
+}
+
 //document.body.appendChild(component());
 
 let element = component(); // Store the element to re-render on print.js changes
 document.body.appendChild(element);
+let element_ts = component_tree_shaking();
+document.body.appendChild(element_ts);
 
 if(module.hot){
 	module.hot.accept('./print.js', function(){

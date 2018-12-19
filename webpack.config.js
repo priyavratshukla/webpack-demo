@@ -4,11 +4,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  	mode: 'development', //TODO : remove when going for production 
+  	mode: 'production', // development or production 
   	entry:{
   		app : './src/index.js'
   	},
-  	devtool: 'inline-source-map', //TODO : remove when going for production 
+  	//devtool: 'inline-source-map', //TODO : remove when going for production 
   	devServer:{
   		contentBase: './dist',
   		hot: true
@@ -24,6 +24,9 @@ module.exports = {
     	filename: '[name].bundle.js',
     	path: path.resolve(__dirname, 'dist'),
     	publicPath: '/'
+  	},
+  	optimization: {
+  		usedExports: true
   	},
   	module: {
 	    rules: [
