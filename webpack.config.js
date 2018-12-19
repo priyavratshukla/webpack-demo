@@ -8,7 +8,7 @@ module.exports = {
   	entry:{
   		app : './src/index.js'
   	},
-  	//devtool: 'inline-source-map', //TODO : remove when going for production 
+  	devtool: 'inline-source-map', //TODO : remove when going for production 
   	devServer:{
   		contentBase: './dist',
   		hot: true
