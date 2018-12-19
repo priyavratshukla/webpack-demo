@@ -13,6 +13,8 @@ npm run build
 
 npm run watch
 
+webpack-dev-server --hotOnly
+
 
 Dependencies
 =========================================
