@@ -11,8 +11,10 @@ npx webpack --config webpack.config.js
 
 npm run build
 
+npm run watch
 
-Asset management
+
+Dependencies
 =========================================
 
 npm install --save-dev style-loader css-loader
@@ -25,3 +27,11 @@ npm install --save-dev csv-loader xml-loader
 npm install --save-dev html-webpack-plugin
 
 npm install --save-dev clean-webpack-plugin
+
+npm install --save-dev webpack-dev-server
+
+npm install --save-dev express webpack-dev-middleware
+
+
+
+
